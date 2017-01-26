@@ -1,0 +1,58 @@
+/*****************************************************************
+GUI for the MathGame
+
+@author Molly Alger
+@author Jennifer Moon
+@version 1
+*****************************************************************/
+
+package MathGame;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class GamePanel extends JPanel {
+
+	private JButton[][] board;
+	private int size = 4;
+	
+	public GamePanel() {
+		
+		// create panels for the GUI
+		JPanel j = new JPanel();
+		j.setLayout(new BorderLayout());
+		JPanel top = new JPanel();
+		JPanel center = new JPanel();
+		JPanel bottom = new JPanel();
+		
+		ButtonListener listen = new ButtonListener();
+		
+		// create a grid layout for the board
+		center.setLayout(new GridLayout(size, size));
+		
+		//fill the board with JLabels
+		board = new JButton[size][size];
+		for (int row = 0; row < size; row++){
+			for (int col = 0; col < size; col++) {
+				board[row][col] = new JButton("X");
+				board[row][col].setPreferredSize(
+						new Dimension (75, 50));
+				board[row][col].setEnabled(false);
+				center.add(board[row][col]);
+			}
+		}
+		
+	}
+	
+	private class ButtonListener implements ActionListener {
+
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+}
