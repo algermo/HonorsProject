@@ -4,7 +4,7 @@ GUI for the MathGame
 @author Molly Alger
 @author Jennifer Moon
 @version 1
- *****************************************************************/
+*****************************************************************/
 
 package MathGame;
 
@@ -20,36 +20,33 @@ public class GamePanel extends JPanel {
 
 	private JButton[][] board;
 	private int size = 4;
-
-	private JButton check; 
-
+	
 	public GamePanel() {
-
+		
 		// create panels for the GUI
 		JPanel j = new JPanel();
 		j.setLayout(new BorderLayout());
 		JPanel top = new JPanel();
 		JPanel center = new JPanel();
 		JPanel bottom = new JPanel();
-
+		
 		ButtonListener listen = new ButtonListener();
-
+		
 		// create a grid layout for the board
 		center.setLayout(new GridLayout(size, size));
-
+		
 		// fill the board with JLabels
 		board = new JButton[size][size];
 		for (int row = 0; row < size; row++) {
 			for (int col = 0; col < size; col++) {
 				board[row][col] = new JButton("X");
-				board[row][col].setBackground(Color.white);
 				board[row][col].setPreferredSize(new Dimension (75, 50));
 				board[row][col].setEnabled(true);
 				center.add(board[row][col]);
 				board[row][col].addActionListener(listen);
 			}
 		}
-
+		
 		// manually placing fires
 		board[0][1].setEnabled(false);
 		board[0][1].setBackground(Color.red);
@@ -63,55 +60,27 @@ public class GamePanel extends JPanel {
 		board[2][2].setBackground(Color.red);
 		board[2][3].setEnabled(false);
 		board[2][3].setBackground(Color.red);
-
+		
 		// put panels in correct places
 		add(j);
 		j.add(top, BorderLayout.NORTH);
 		j.add(center, BorderLayout.CENTER);
 		j.add(bottom, BorderLayout.SOUTH);
-
-		check = new JButton("Check solution");
-		bottom.add(check); 
-		check.addActionListener(listen);
-		j.add(bottom, BorderLayout.SOUTH);
-
+		
 	}
-
+	
 	private class ButtonListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
 			for (int row = 0; row < size; row++){
 				for (int col = 0; col < size; col++) {
 					if(board[row][col] == e.getSource()) {
-						if (board[row][col].getBackground() == Color.white) {
-							board[row][col].setBackground(Color.blue);
-							//						for(int i = 0; i < size; i++) {
-							//							board[row][i].setEnabled(false);
-							//							board[i][col].setEnabled(false);
-							//						}
-						} else if (board[row][col].getBackground() == Color.blue) {
-							board[row][col].setBackground(Color.white);
+						board[row][col].setBackground(Color.blue);
+						for(int i = 0; i < size; i++) {
+							board[row][i].setEnabled(false);
+							board[i][col].setEnabled(false);
 						}
 					}
-				}
-			}
-
-			if (check == e.getSource()){
-				int[][] b = new int[size][size];
-
-				for (int row = 0; row < size; row++){
-					for (int col = 0; col < size; col++) {
-						if (board[col][row].getBackground() == Color.blue){
-							b[col][row] = 1; 
-						}
-					}
-				}
-
-				fourbyfourlogic logic = new fourbyfourlogic(b); 
-				if (logic.check() == true){
-					System.out.println("true");
-				} else {
-					System.out.println("false");
 				}
 			}
 		}
