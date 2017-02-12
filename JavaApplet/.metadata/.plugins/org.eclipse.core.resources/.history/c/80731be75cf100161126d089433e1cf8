@@ -1,0 +1,74 @@
+package MathGame;
+import static java.lang.Math.*;
+
+import java.util.Arrays;
+
+public class RookPoly {
+	
+	public static int count = 0; 
+
+	public static void main(String args[]){
+		
+		RookPoly rp = new RookPoly();
+		
+		int[][] board = new int[3][3];
+		int test = 0;
+//		for(int i = 1; i <= board.length; i++) {
+//			test = rp.place(board, i);
+//			System.out.println(/*Math.pow(test, 1/i)*/ test/i);
+//		}
+		
+		test = rp.place(board, 2);
+		System.out.println(/*Math.pow(test, 1/i)*/ test);
+		
+	}
+
+	public int place(int[][] board, int toPlace) {
+
+		int inte = 0;
+		int[][] editB = board;
+
+		// if we need to place a rook 
+		if(toPlace > 0) {
+			
+			// find a spot on the board that is open
+			for(int row = 0; row < board.length; row++) {
+				for(int col = 0; col < board.length; col++) {
+					
+					// make it so you can't place anything in that spot's row or column
+					if(board[row][col] == 0) {
+						for(int i = 0; i < editB.length; i++) {
+							if(i == row) {
+								for(int x = 0; x < editB.length; x++) {
+									editB[i][x] = -1;
+								}
+							}
+						}
+						for(int j = 0; j < editB.length; j++) {
+							if(j == col) {
+								for(int y = 0; y < editB.length; y++) {
+									editB[y][j] = -1;
+								}
+							}
+						}
+						break;
+					}
+					
+					// then make it so you can't place in that spot again
+					board[row][col] = -1;
+					System.out.println(count + Arrays.deepToString(editB));
+					count++;
+					
+					// and try to place the rest 
+					inte += place(editB, toPlace-1)/*/toPlace*/;
+				}
+			}
+			
+		} else {
+			return 1;
+		}
+		
+		return inte;
+		
+	}
+}
