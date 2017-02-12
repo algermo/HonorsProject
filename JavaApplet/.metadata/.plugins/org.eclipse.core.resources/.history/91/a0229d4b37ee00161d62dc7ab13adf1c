@@ -1,0 +1,41 @@
+package MathGame;
+
+public class RookPoly {
+
+
+
+	public int place(int[][] board, int toPlace) {
+
+		int inte = 0;
+		int[][] editB = board;
+
+		if(toPlace > 0) {
+			for(int row = 0; row < board.length; row++) {
+				for(int col = 0; col < board.length; col++) {
+					if(board[row][col] == 0) {
+						for(int i = 0; i < editB.length; i++) {
+							if(i == row) {
+								for(int x = 0; x < editB.length; x++) {
+									editB[i][x] = -1;
+								}
+							}
+						}
+						for(int j = 0; j < editB.length; j++) {
+							if(j == col) {
+								for(int y = 0; y < editB.length; y++) {
+									editB[y][j] = -1;
+								}
+							}
+						}
+					}
+					
+					board[row][col] = 1;
+					inte += place(editB, toPlace-1);
+				}
+			}
+		}
+		
+		return inte;
+		
+	}
+}
