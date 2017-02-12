@@ -20,8 +20,6 @@ public class fourbyfourlogic {
 		fourbyfourlogic example = new fourbyfourlogic(); 
 		example.place(0, 0);
 		example.printBoard(); 
-		
-		//hello world
 
 		if (example.check() == true){
 			System.out.println("true");
