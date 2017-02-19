@@ -10,21 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="algermo.honorsproject.HomePage">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView2" />
 
     <Button
-        android:text="Click Me"
+        android:text="3 by 3 Board"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp" />
+        android:id="@+id/button3by3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
+
+
