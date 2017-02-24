@@ -19,7 +19,8 @@
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:id="@+id/gridLayout">
 
         <Button android:text=""
             android:id="@+id/button0"
@@ -60,6 +61,24 @@
 
 
     </GridLayout>
+
+    <Button
+        android:text="Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:id="@+id/spotsLeft" />
 
 </RelativeLayout>
 
