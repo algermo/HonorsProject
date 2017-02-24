@@ -135,14 +135,14 @@ public class GameLogic {
     /***********************************************************************************************
      * Checks to see if the given rook configuration is nonattacking or attacking
      *
-     * @return whether or not the rook configuration is attacking
+     * @return whether or not the rook configuration is nonattacking
      **********************************************************************************************/
-    public boolean check(){
+    public boolean check(int[][] brd){
         for (int i = 0; i < columns; i++){
             int sum = 0;
             for (int j = 0; j < rows; j++){
-                if (board[i][j] > -1){
-                    sum += board[i][j];
+                if (brd[i][j] > -1){
+                    sum += brd[i][j];
                 }
             }
             if (sum > 1) {
@@ -153,8 +153,8 @@ public class GameLogic {
         for (int i = 0; i < rows; i++){
             int sum = 0;
             for (int j = 0; j < columns; j++){
-                if (board[j][i] > -1){
-                    sum += board[j][i];
+                if (brd[j][i] > -1){
+                    sum += brd[j][i];
                 }
             }
             if (sum > 1) {
