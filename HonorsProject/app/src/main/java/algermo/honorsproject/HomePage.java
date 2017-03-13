@@ -21,5 +21,14 @@ public class HomePage extends AppCompatActivity {
                 startActivity(tres);
             }
         });
+
+        Button btn2 = (Button) findViewById(R.id.button4by4);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quatro = new Intent(HomePage.this, FourByFourGame.class);
+                startActivity(quatro);
+            }
+        });
     }
 }

@@ -12,6 +12,15 @@
 
 
     <Button
+        android:text="4 by 4 Board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4by4"
+        android:layout_marginTop="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:text="3 by 3 Board"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

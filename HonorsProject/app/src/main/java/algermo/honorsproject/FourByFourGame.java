@@ -20,19 +20,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class ThreeByThreeGame extends AppCompatActivity {
+public class FourByFourGame extends AppCompatActivity {
 
     GameLogic game;
     public ArrayList<int[][]> allBoards;
     public ArrayList<int[]> rookPolys;
-    final Button[][] buttons = new Button[3][3];
+    final Button[][] buttons = new Button[4][4];
     public int[][] board;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three_board);
-        View root = LayoutInflater.from(this).inflate(R.layout.activity_three_board, null);
+        setContentView(R.layout.activity_four_board);
+        View root = LayoutInflater.from(this).inflate(R.layout.activity_four_board, null);
         setContentView(root);
 
         allBoards = new ArrayList<int[][]>();
@@ -42,7 +42,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
         Random rand = new Random();
         int boardNum = rand.nextInt(allBoards.size());
-        board = new int[3][3];
+        board = new int[4][4];
         board = allBoards.get(boardNum);
 
         game = new GameLogic(board, rookPolys.get(boardNum));
@@ -54,25 +54,39 @@ public class ThreeByThreeGame extends AppCompatActivity {
         final Button btn2 = (Button) findViewById(R.id.button2);
         buttons[0][2] = btn2;
         final Button btn3 = (Button) findViewById(R.id.button3);
-        buttons[1][0] = btn3;
+        buttons[0][3] = btn3;
         final Button btn4 = (Button) findViewById(R.id.button4);
-        buttons[1][1] = btn4;
+        buttons[1][0] = btn4;
         final Button btn5 = (Button) findViewById(R.id.button5);
-        buttons[1][2] = btn5;
+        buttons[1][1] = btn5;
         final Button btn6 = (Button) findViewById(R.id.button6);
-        buttons[2][0] = btn6;
+        buttons[1][2] = btn6;
         final Button btn7 = (Button) findViewById(R.id.button7);
-        buttons[2][1] = btn7;
+        buttons[1][3] = btn7;
         final Button btn8 = (Button) findViewById(R.id.button8);
-        buttons[2][2] = btn8;
+        buttons[2][0] = btn8;
+        final Button btn9 = (Button) findViewById(R.id.button9);
+        buttons[2][1] = btn9;
+        final Button btn10 = (Button) findViewById(R.id.button10);
+        buttons[2][2] = btn10;
+        final Button btn11 = (Button) findViewById(R.id.button11);
+        buttons[2][3] = btn11;
+        final Button btn12 = (Button) findViewById(R.id.button12);
+        buttons[3][0] = btn12;
+        final Button btn13 = (Button) findViewById(R.id.button13);
+        buttons[3][1] = btn13;
+        final Button btn14 = (Button) findViewById(R.id.button14);
+        buttons[3][2] = btn14;
+        final Button btn15 = (Button) findViewById(R.id.button15);
+        buttons[3][3] = btn15;
 
         final TextView numLeft = (TextView) findViewById(R.id.spotsLeft);
         numLeft.setText(game.getRemaining());
 
         final int[][] tempBoard1 = board;
 
-        for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 3; j++) {
+        for(int i = 0; i < 4; i++) {
+            for(int j = 0; j < 4; j++) {
                 if(board[i][j] == -1) {
                     buttons[i][j].setEnabled(false);
                     buttons[i][j].setBackgroundResource(R.drawable.fire);
@@ -138,8 +152,8 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
     public void checkButtons() {
 
-        for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 3; j++) {
+        for(int i = 0; i < 4; i++) {
+            for(int j = 0; j < 4; j++) {
                 if(!buttons[i][j].isEnabled() && board[i][j] == 0) {
                     board[i][j] = 1;
                 }
@@ -151,7 +165,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
     public void readFile() {
 
         //read the file
-        InputStream inStream = getApplicationContext().getResources().openRawResource(R.raw.x3);
+        InputStream inStream = getApplicationContext().getResources().openRawResource(R.raw.x4);
         InputStreamReader inputreader = new InputStreamReader(inStream);
         BufferedReader buffreader = new BufferedReader(inputreader);
         String line;
