@@ -97,7 +97,7 @@ public class FourByFourGame extends AppCompatActivity {
                     @Override
                     public boolean onTouch(View view, MotionEvent event) {
                         if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                            //buttons[x][y].setEnabled(false);
+                            buttons[x][y].setEnabled(false);
                             SharedPreferences pref = getSharedPreferences("btnClk"+
                                     Integer.toString(buttons[x][y].getId()), MODE_PRIVATE);
                             boolean activated = pref.getBoolean("activated", false);
@@ -126,22 +126,25 @@ public class FourByFourGame extends AppCompatActivity {
                     int duration = Toast.LENGTH_SHORT;
                     Context context = getApplicationContext();
                     CharSequence text;
-                    //Toast toast;
+                    Toast toast;
 
                     if(game.check(tempBoard)) {
                         if(game.answer(tempBoard)) {
                             text = "Correct.";
-                            /*toast = Toast.makeText(context, text, duration);
-                            toast.show();*/
+                            toast = Toast.makeText(context, text, duration);
+                            toast.show();
                         } else {
                             text = "You've already tried that.";
-                           /* toast = Toast.makeText(context, text, duration);*/
+                            toast = Toast.makeText(context, text, duration);
+                            toast.show();
                         }
                     } else {
                         text = "Incorrect.";
-                       /* toast = Toast.makeText(context, text, duration);*/
+                       toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }
-                    numLeft.setText(text);
+                    //numLeft.setText(text);
+                    numLeft.setText(game.getRemaining());
                 }
                 return false;
             }

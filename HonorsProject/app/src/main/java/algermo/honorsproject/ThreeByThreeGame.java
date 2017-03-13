@@ -2,6 +2,7 @@ package algermo.honorsproject;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 
@@ -77,20 +80,24 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     buttons[i][j].setEnabled(false);
                     buttons[i][j].setBackgroundResource(R.drawable.fire);
                 }
+
                 final int x = i;
                 final int y = j;
+
                 buttons[i][j].setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View view, MotionEvent event) {
                         if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                            //buttons[x][y].setEnabled(false);
+                            buttons[x][y].setEnabled(false);
                             SharedPreferences pref = getSharedPreferences("btnClk"+
                                     Integer.toString(buttons[x][y].getId()), MODE_PRIVATE);
                             boolean activated = pref.getBoolean("activated", false);
+
                             if(activated == false) {
                                 SharedPreferences.Editor editor = pref.edit();
                                 editor.putBoolean("activated", true);
                             }
+
                             buttons[x][y].setBackgroundColor(Color.BLUE);
                             checkButtons();
                         }
@@ -101,7 +108,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
             }
         }
 
-        final int[][] tempBoard = board;
+//        final int[][] tempBoard = board;
 
         final Button checkBtn = (Button) findViewById(R.id.check);
         checkBtn.setOnTouchListener(new View.OnTouchListener() {
@@ -112,22 +119,43 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     int duration = Toast.LENGTH_SHORT;
                     Context context = getApplicationContext();
                     CharSequence text;
-                    //Toast toast;
+                    Toast toast;
+
+                    checkButtons();
+                    int[][] tempBoard = board;
+
+                    //check to see if the board is updating-----------------------------------------
+                    for (int i = 0; i < board.length; i ++){
+                        for (int j = 0; j < board.length; j ++){
+                            System.out.print(board[i][j]);
+                        }
+                        System.out.println("");
+                    }
+
+                    //check to see if the tempboard is updating-------------------------------------
+                    for (int i = 0; i < tempBoard.length; i ++){
+                        for (int j = 0; j < tempBoard.length; j ++){
+                            System.out.print(tempBoard[i][j]);
+                        }
+                        System.out.println("");
+                    }
 
                     if(game.check(tempBoard)) {
                         if(game.answer(tempBoard)) {
                             text = "Correct.";
-                            /*toast = Toast.makeText(context, text, duration);
-                            toast.show();*/
+                            toast = Toast.makeText(context, text, duration);
+                            toast.show();
                         } else {
-                            text = "You've already tried that.";
-                           /* toast = Toast.makeText(context, text, duration);*/
+                            text = "You already tried that.";
+                           toast = Toast.makeText(context, text, duration);
+                            toast.show();
                         }
                     } else {
-                        text = "Incorrect.";
-                       /* toast = Toast.makeText(context, text, duration);*/
+                        text = "Wrong.";
+                        toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }
-                    numLeft.setText(text);
+                    //numLeft.setText(text);
                 }
                 return false;
             }
@@ -140,7 +168,8 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
-                if(!buttons[i][j].isEnabled() && board[i][j] == 0) {
+                //int color = ((ColorDrawable)buttons[i][j].getBackground()).getColor();
+                if(!buttons[i][j].isEnabled() && board[i][j] == 0 /*color == Color.BLUE*/) {
                     board[i][j] = 1;
                 }
             }

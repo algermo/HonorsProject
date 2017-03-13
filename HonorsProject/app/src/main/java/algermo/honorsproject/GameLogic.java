@@ -26,7 +26,7 @@ public class GameLogic {
     private int[] remaining;
 
     /* All ANSWERS the user has submitted*/
-    private ArrayList<int[][]> ans;
+    private ArrayList</*int[][]*/ String> ans;
 
 
     /***********************************************************************************************
@@ -55,7 +55,7 @@ public class GameLogic {
         poly = polynomial;
         remaining = polynomial;
 
-        ans = new ArrayList<int[][]>();
+        ans = new ArrayList</*int[][]*/ String>();
     }
 
     /***********************************************************************************************
@@ -82,8 +82,18 @@ public class GameLogic {
      * @return whether or not the user has already submitted given answer
      **********************************************************************************************/
     public boolean answer(int[][] brd){
-        if (!ans.contains(brd)){
-            ans.add(brd);
+
+        String answer = "";
+
+        for (int i = 0; i < board.length; i ++){
+            for (int j = 0; j < board.length; j ++){
+                answer += board[i][j] + "";
+            }
+            System.out.println("");
+        }
+
+        if (!ans.contains(/*brd*/ answer)){
+            ans.add(/*brd*/ answer);
 
             int rooks = 0;
 
