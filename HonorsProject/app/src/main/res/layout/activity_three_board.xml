@@ -66,29 +66,41 @@
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/check"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="350dp"
         android:id="@+id/spotsLeft" />
 
-    <Button
-        android:text="Reset"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/reset"
-        android:layout_below="@+id/spotsLeft"
-        android:layout_toRightOf="@+id/spotsLeft"
-        android:layout_toEndOf="@+id/spotsLeft" />
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:id="@+id/gridLayout2">
 
-    <Button
-        android:text="Check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/check"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/spotsLeft"
-        android:layout_alignEnd="@+id/spotsLeft" />
+        <Button
+            android:text="Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/spotsLeft"
+            android:layout_alignEnd="@+id/spotsLeft" />
+
+        <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset"
+            android:layout_below="@+id/spotsLeft"
+            android:layout_toRightOf="@+id/spotsLeft"
+            android:layout_toEndOf="@+id/spotsLeft" />
+
+    </GridLayout>
 
 </RelativeLayout>
 

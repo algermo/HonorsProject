@@ -80,6 +80,8 @@ public class ThreeByThreeGame extends AppCompatActivity {
                 if(board[i][j] == -1) {
                     buttons[i][j].setEnabled(false);
                     buttons[i][j].setBackgroundResource(R.drawable.fire);
+                } else {
+                    buttons[i][j].setBackgroundResource(android.R.drawable.btn_default);
                 }
 
                 final int x = i;
@@ -90,7 +92,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     public boolean onTouch(View view, MotionEvent event) {
                         if(event.getAction() == MotionEvent.ACTION_DOWN) {
                             buttons[x][y].setEnabled(false);
-                            buttons[x][y].getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.MULTIPLY);
+                            buttons[x][y].setBackgroundResource(R.drawable.firehat);
                             checkButtons();
                         }
                         return false;
@@ -161,7 +163,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
                             if(board[i][j] != -1) {
                                 board[i][j] = 0;
                                 buttons[i][j].setEnabled(true);
-                                buttons[i][j].getBackground().clearColorFilter();
+                                buttons[i][j].setBackgroundResource(android.R.drawable.btn_default);
                             }
                         }
                     }
