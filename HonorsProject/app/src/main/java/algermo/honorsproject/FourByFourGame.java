@@ -2,6 +2,7 @@ package algermo.honorsproject;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -98,14 +99,7 @@ public class FourByFourGame extends AppCompatActivity {
                     public boolean onTouch(View view, MotionEvent event) {
                         if(event.getAction() == MotionEvent.ACTION_DOWN) {
                             buttons[x][y].setEnabled(false);
-                            SharedPreferences pref = getSharedPreferences("btnClk"+
-                                    Integer.toString(buttons[x][y].getId()), MODE_PRIVATE);
-                            boolean activated = pref.getBoolean("activated", false);
-                            if(activated == false) {
-                                SharedPreferences.Editor editor = pref.edit();
-                                editor.putBoolean("activated", true);
-                            }
-                            buttons[x][y].setBackgroundColor(Color.BLUE);
+                            buttons[x][y].getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.MULTIPLY);
                             checkButtons();
                         }
                         return false;
@@ -128,23 +122,60 @@ public class FourByFourGame extends AppCompatActivity {
                     CharSequence text;
                     Toast toast;
 
+                    checkButtons();
+                    int[][] tempBoard = board;
+
+                    //check to see if the board is updating-----------------------------------------
+                    for (int i = 0; i < board.length; i ++){
+                        for (int j = 0; j < board.length; j ++){
+                            System.out.print(board[i][j]);
+                        }
+                        System.out.println("");
+                    }
+
+                    //check to see if the tempboard is updating-------------------------------------
+                    for (int i = 0; i < tempBoard.length; i ++){
+                        for (int j = 0; j < tempBoard.length; j ++){
+                            System.out.print(tempBoard[i][j]);
+                        }
+                        System.out.println("");
+                    }
+
                     if(game.check(tempBoard)) {
                         if(game.answer(tempBoard)) {
                             text = "Correct.";
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                         } else {
-                            text = "You've already tried that.";
+                            text = "You already tried that.";
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                         }
                     } else {
-                        text = "Incorrect.";
-                       toast = Toast.makeText(context, text, duration);
+                        text = "Wrong.";
+                        toast = Toast.makeText(context, text, duration);
                         toast.show();
                     }
-                    //numLeft.setText(text);
-                    numLeft.setText(game.getRemaining());
+                }
+                return false;
+            }
+        });
+
+        final Button resetBtn = (Button) findViewById(R.id.reset);
+        resetBtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                    for (int i = 0; i < board.length; i++) {
+                        for (int j = 0; j < board.length; j++) {
+                            if(board[i][j] != -1) {
+                                board[i][j] = 0;
+                                buttons[i][j].setEnabled(true);
+                                buttons[i][j].getBackground().clearColorFilter();
+                            }
+                        }
+                    }
                 }
                 return false;
             }

@@ -2,6 +2,7 @@ package algermo.honorsproject;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -89,16 +90,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     public boolean onTouch(View view, MotionEvent event) {
                         if(event.getAction() == MotionEvent.ACTION_DOWN) {
                             buttons[x][y].setEnabled(false);
-                            SharedPreferences pref = getSharedPreferences("btnClk"+
-                                    Integer.toString(buttons[x][y].getId()), MODE_PRIVATE);
-                            boolean activated = pref.getBoolean("activated", false);
-
-                            if(activated == false) {
-                                SharedPreferences.Editor editor = pref.edit();
-                                editor.putBoolean("activated", true);
-                            }
-
-                            buttons[x][y].setBackgroundColor(Color.BLUE);
+                            buttons[x][y].getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.MULTIPLY);
                             checkButtons();
                         }
                         return false;
@@ -107,8 +99,6 @@ public class ThreeByThreeGame extends AppCompatActivity {
                 });
             }
         }
-
-//        final int[][] tempBoard = board;
 
         final Button checkBtn = (Button) findViewById(R.id.check);
         checkBtn.setOnTouchListener(new View.OnTouchListener() {
@@ -155,7 +145,26 @@ public class ThreeByThreeGame extends AppCompatActivity {
                         toast = Toast.makeText(context, text, duration);
                         toast.show();
                     }
-                    //numLeft.setText(text);
+                }
+                return false;
+            }
+        });
+
+        final Button resetBtn = (Button) findViewById(R.id.reset);
+        resetBtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                    for (int i = 0; i < board.length; i++) {
+                        for (int j = 0; j < board.length; j++) {
+                            if(board[i][j] != -1) {
+                                board[i][j] = 0;
+                                buttons[i][j].setEnabled(true);
+                                buttons[i][j].getBackground().clearColorFilter();
+                            }
+                        }
+                    }
                 }
                 return false;
             }
@@ -164,12 +173,12 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
     }
 
+
     public void checkButtons() {
 
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
-                //int color = ((ColorDrawable)buttons[i][j].getBackground()).getColor();
-                if(!buttons[i][j].isEnabled() && board[i][j] == 0 /*color == Color.BLUE*/) {
+                if(!buttons[i][j].isEnabled() && board[i][j] == 0) {
                     board[i][j] = 1;
                 }
             }
