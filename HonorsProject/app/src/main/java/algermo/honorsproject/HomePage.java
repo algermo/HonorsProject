@@ -30,5 +30,14 @@ public class HomePage extends AppCompatActivity {
                 startActivity(quatro);
             }
         });
+
+        Button btn3 = (Button) findViewById(R.id.btnhowtoplay);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent instructions = new Intent(HomePage.this, HowToPlay.class);
+                startActivity(instructions);
+            }
+        });
     }
 }
