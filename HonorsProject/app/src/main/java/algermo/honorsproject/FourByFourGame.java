@@ -148,6 +148,7 @@ public class FourByFourGame extends AppCompatActivity {
                             text = "Correct.";
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
+                            numLeft.setText(game.getRemaining());
                         } else {
                             text = "You already tried that.";
                             toast = Toast.makeText(context, text, duration);

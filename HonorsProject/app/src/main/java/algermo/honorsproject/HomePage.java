@@ -32,7 +32,7 @@ public class HomePage extends AppCompatActivity {
         });
 
         Button btn3 = (Button) findViewById(R.id.btnhowtoplay);
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent instructions = new Intent(HomePage.this, HowToPlay.class);
