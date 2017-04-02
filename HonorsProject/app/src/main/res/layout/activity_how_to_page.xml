@@ -8,14 +8,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backrepeat"
     tools:context="algermo.honorsproject.HowToPlay">
+
+    <View
+    android:id="@+id/menuback"
+    android:layout_width="500dp"
+    android:layout_height="510dp"
+    android:background="@drawable/menubg"
+    android:alpha=".5"
+    android:layout_centerHorizontal="true" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,18 +39,22 @@
             android:text="Oh no!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
             android:textSize="50dp"
             android:textColor="#0044cc"
-            android:typeface="sans"/>
+            android:typeface="sans"
+            android:id="@+id/textView3" />
 
         <TextView
             android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out?"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -52,6 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="35dp"
             android:textColor="#0044cc"
             android:typeface="sans"/>
@@ -62,6 +77,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -82,6 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -102,6 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -112,6 +133,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -132,6 +155,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"
@@ -143,6 +168,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -164,6 +191,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#80aaff"/>
@@ -182,12 +211,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="10dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/textView2"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="-200dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="#ffffff"/>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

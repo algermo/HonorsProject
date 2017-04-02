@@ -8,8 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backrepeat"
     tools:context="algermo.honorsproject.FourByFourGame">
 
+    <View
+        android:id="@+id/menuback"
+        android:layout_width="325dp"
+        android:layout_height="330dp"
+        android:background="@drawable/menubg"
+        android:alpha=".5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <View
+        android:id="@+id/labelback"
+        android:layout_width="325dp"
+        android:layout_height="150dp"
+        android:background="@drawable/menubg"
+        android:alpha=".5"
+        android:layout_below="@+id/menuback"
+        android:layout_alignLeft="@+id/menuback"
+        android:layout_alignStart="@+id/menuback"
+        android:layout_marginTop="25dp" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -95,7 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="370dp"
-        android:id="@+id/spotsLeft" />
+        android:id="@+id/spotsLeft"
+        android:textColor="#ffffff"/>
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -105,7 +127,7 @@
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="470dp"
         android:id="@+id/gridLayout2">
 
         <Button
@@ -113,7 +135,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/check"
-            android:layout_marginBottom="15dp"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/spotsLeft"
             android:layout_alignEnd="@+id/spotsLeft" />

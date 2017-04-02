@@ -7,7 +7,7 @@
         android:icon="@drawable/firehat"
         android:label="We Lit"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/HiddenTitleTheme">
         <activity android:name=".HomePage"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
