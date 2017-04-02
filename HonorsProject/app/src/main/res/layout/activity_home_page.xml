@@ -19,6 +19,7 @@
         android:id="@+id/btnhowtoplay"
         android:layout_below="@+id/button4by4"
         android:layout_alignLeft="@+id/button4by4"
+        android:layout_centerHorizontal="true"
         android:layout_alignStart="@+id/button4by4" />
 
     <Button
@@ -28,7 +29,7 @@
         android:id="@+id/button4by4"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/button3by3"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
 
     <View
         android:id="@+id/menuback"

@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_three_board"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,7 +15,7 @@
     android:id="@+id/menuback"
     android:layout_width="500dp"
     android:layout_height="510dp"
-    android:background="@drawable/menubg"
+
     android:alpha=".5"
     android:layout_centerHorizontal="true" />
 
@@ -24,11 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="25dp">
+        android:layout_marginBottom="-300dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -37,13 +37,13 @@
 
         <TextView
             android:text="Oh no!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#0044cc"
+            android:textColor="#000000"
             android:typeface="sans"
             android:id="@+id/textView3" />
 
@@ -51,41 +51,41 @@
             android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out?"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:text="Example"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="35dp"
-            android:textColor="#0044cc"
+            android:textColor="#000000"
             android:typeface="sans"/>
 
         <TextView
             android:text="Let's look at an empty field without any fires to start."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-180dp"
             android:src="@drawable/blank_brd"
@@ -95,19 +95,19 @@
 
         <TextView
             android:text="Since there aren't any firefighters in the field yet, we can place one wherever we want. So, let's place one in the middle."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-180dp"
             android:src="@drawable/center_brd"
@@ -117,31 +117,31 @@
 
         <TextView
             android:text="This firefighter sprays their hose in the middle row and the middle column because they are standing in both the middle row and middle column."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:text="\nWe could have also placed a firefighter in the upper right corner. Like before, the firefighter sprays their hose in their row and column."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-180dp"
             android:src="@drawable/topright_brd"
@@ -151,32 +151,32 @@
 
         <TextView
             android:text="In order to put the fire out, we will need more firefighters. Remember, we have to place firefighters in such a way that they won't spray each other!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"
+            android:textColor="#000000"
             android:id="@+id/textView" />
 
         <TextView
             android:text="\nSo, we can place firefighters in both the center and upper right!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-180dp"
             android:src="@drawable/double_brd"
@@ -186,20 +186,20 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:text="There are many different ways to place firefighters, but we can never place more firefighters than the number of rows we have. Firefighters also don't like burnt feet, so we can't place them in a fire.It's your job to place the firefighters and save the day!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="There are many different ways to place firefighters, but we can never place more firefighters than the number of rows we have. Firefighters also don't like burnt feet, so we can't place them in a fire. It's your job to place the firefighters and save the day!"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#80aaff"/>
+            android:textColor="#000000"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:src="@drawable/fire"
@@ -209,7 +209,7 @@
             android:text="\nGame concept adapted from Dakota Doster and Dr. Feryal Alayont.
             \nGame developed by Molly Alger and Jennifer Moon."
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="10dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/textView2"
@@ -218,7 +218,7 @@
             android:layout_centerVertical="true"
             android:layout_marginBottom="-200dp"
             android:gravity="center"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>
