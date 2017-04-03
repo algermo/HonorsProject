@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_home_page"
     android:layout_width="match_parent"
@@ -27,18 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button4by4"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/button3by3"
+        android:layout_marginTop="280dp"
         android:layout_centerHorizontal="true"/>
-
-    <View
-        android:id="@+id/menuback"
-        android:layout_width="200dp"
-        android:layout_height="220dp"
-        android:background="@drawable/menubg"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:alpha=".5"/>
 
     <Button
         android:text="Small Field"
@@ -46,9 +37,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/button3by3"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btnhowtoplay"
-        android:layout_alignEnd="@+id/btnhowtoplay"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="210dp"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/menuback"
+        android:layout_width="200dp"
+        android:layout_height="220dp"
+        android:background="@drawable/menubg"
+        android:alpha=".5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/title"
+        android:id="@+id/imageView2"
+        android:layout_marginBottom="80dp"
+        android:layout_alignBottom="@+id/button3by3"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
 
