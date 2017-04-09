@@ -134,17 +134,17 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
                     if(game.check(tempBoard)) {
                         if(game.answer(tempBoard)) {
-                            text = "Correct.";
+                            text = "Awesome!";
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                             numLeft.setText(game.getRemaining());
                         } else {
-                            text = "You already tried that.";
+                            text = "You already placed them like that. Try placing them a different way!";
                            toast = Toast.makeText(context, text, duration);
                             toast.show();
                         }
                     } else {
-                        text = "Wrong.";
+                        text = "Oops! Try again!";
                         toast = Toast.makeText(context, text, duration);
                         toast.show();
                     }
@@ -207,11 +207,11 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     int size = Integer.parseInt(part[0]);
                     int[] boardVals = new int[size * size];
 
-                    for (int i = 1; i < (boardVals.length); i++) {
+                    for (int i = 1; i < (boardVals.length + 1); i++) {
                         boardVals[i - 1] = Integer.parseInt(part[i]);
                     }
 
-                    int[] poly = new int[size + 1];
+                    int[] poly = new int[/*size + */1];
 
                     int count = 0;
                     for(int j = (size * size) + 1; j < part.length; j++) {
@@ -229,7 +229,7 @@ public class ThreeByThreeGame extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        System.out.print(allBoards);
+        //System.out.print(allBoards);
 
     }
 

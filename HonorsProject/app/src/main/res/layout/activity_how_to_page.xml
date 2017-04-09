@@ -48,11 +48,46 @@
             android:id="@+id/textView3" />
 
         <TextView
-            android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out?"
+            android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out? Place firefighters in such a way that they can save the whole field from the fire! Firefighters want to spray the entire field."
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+
+            android:src="@drawable/blank_brd"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/imageView3" />
+
+        <TextView
+            android:text="Let's look at an empty field without any fires to start."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:text="Since there aren't any firefighters in the field yet, we can place one wherever we want. So, let's place one in the middle."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
@@ -69,41 +104,8 @@
             android:layout_marginRight="10dp"
             android:textSize="35dp"
             android:textColor="#000000"
-            android:typeface="sans"/>
-
-        <TextView
-            android:text="Let's look at an empty field without any fires to start."
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-180dp"
-            android:src="@drawable/blank_brd"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:text="Since there aren't any firefighters in the field yet, we can place one wherever we want. So, let's place one in the middle."
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
+            android:typeface="sans"
+            android:id="@+id/textView4" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -217,7 +219,7 @@
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="-200dp"
+            android:layout_marginBottom="0dp"
             android:gravity="center"
             android:textColor="#000000"/>
     </LinearLayout>

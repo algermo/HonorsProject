@@ -64,12 +64,19 @@ public class GameLogic {
      * @return a string with the number of ways to place 'x' rooks remaining
      **********************************************************************************************/
     public String getRemaining(){
-        String msg = "You have this many remaining to place:\n" + poly[0] +
-                " ways to place 0";
+        String msg = "";
 
-        for (int i = 1; i < remaining.length; i++){
-            msg = msg + "\n" + remaining[i] + " ways to place " + i;
+        if (poly[0] == 0) {
+            msg = "You did it!";
+        } else if (poly[0] == 1){
+            msg = "There is " + poly[0] + " more way to place firefighters";
+        } else {
+            msg = "There are " + poly[0] + " more ways to place firefighters";
         }
+
+//        for (int i = 1; i < remaining.length; i++){
+//            msg = msg + "\n" + remaining[i] + " ways to place " + i;
+//        }
 
         return msg;
     }
@@ -89,7 +96,7 @@ public class GameLogic {
             for (int j = 0; j < board.length; j ++){
                 answer += board[i][j] + "";
             }
-            System.out.println("");
+            //System.out.println("");
         }
 
         if (!ans.contains(/*brd*/ answer)){
@@ -105,7 +112,8 @@ public class GameLogic {
                 }
             }
 
-            remaining[rooks]--;
+
+            remaining[/*rooks*/ 0]--;
             return true;
         }
         return false;
@@ -170,6 +178,20 @@ public class GameLogic {
             if (sum > 1) {
                 return false;
             }
+        }
+
+        int rooks = 0;
+
+        for (int i = 0; i < brd.length; i++){
+            for (int j = 0; j < brd.length; j++){
+                if (brd[i][j] == 1){
+                    rooks++;
+                }
+            }
+        }
+
+        if (rooks != rows){
+            return false;
         }
 
         return true;
