@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/backrepeat"
+    android:background="@color/green"
     tools:context="algermo.honorsproject.HowToPlay">
 
     <View
@@ -23,8 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-300dp">
+        android:layout_alignParentStart="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,8 +34,15 @@
         android:layout_alignParentStart="true"
         android:weightSum="1">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-190dp"
+            android:layout_marginBottom="-150dp"
+            android:src="@drawable/title"/>
+
         <TextView
-            android:text="Oh no!"
+            android:text="How to Play"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
@@ -45,14 +51,77 @@
             android:textSize="50dp"
             android:textColor="#000000"
             android:typeface="sans"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView1" />
+
 
         <TextView
-            android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out? Place firefighters in such a way that they can save the whole field from the fire! Firefighters want to spray the entire field."
+            android:text="It's the first day on the job for a new fire department. They get their first call - a field is on fire and the firefighters need to put the fire out and stop it from spreading! \n\nThe only problem is, it's everyone's first day! So, it's your job to help out the firefighters and tell them where to stand."
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:text="\nWait a minute though, there are a few rules for where the firefighters can stand:"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:text="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="50dp"
+            android:textColor="#000000"
+            android:typeface="sans"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:text="Firefighters can't stand in fire!"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:typeface="serif"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/fire"
+            android:layout_below="@+id/fireimg"/>
+
+        <TextView
+            android:text="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="50dp"
+            android:textColor="#000000"
+            android:typeface="sans"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:text="In order to put the fire out AND keep the fire from spreading, the entire field needs to be sprayed with water. Firefighters spray everywhere in their row and column. "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
@@ -63,78 +132,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp"
-
-            android:src="@drawable/blank_brd"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/imageView3" />
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/firehat" />
 
         <TextView
-            android:text="Let's look at an empty field without any fires to start."
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:text="Since there aren't any firefighters in the field yet, we can place one wherever we want. So, let's place one in the middle."
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:text="Example"
+            android:text="3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="35dp"
+            android:textSize="50dp"
             android:textColor="#000000"
             android:typeface="sans"
             android:id="@+id/textView4" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-180dp"
-            android:src="@drawable/center_brd"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
         <TextView
-            android:text="This firefighter sprays their hose in the middle row and the middle column because they are standing in both the middle row and middle column."
+            android:text="Firefighters can't stand where they might be sprayed with water by someone else. So, that means there needs to be exactly one firefighter in every row and every column."
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:text="\nWe could have also placed a firefighter in the upper right corner. Like before, the firefighter sprays their hose in their row and column."
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
@@ -144,75 +160,38 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-180dp"
-            android:src="@drawable/topright_brd"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="-190dp"
+            android:layout_marginBottom="-160dp"
+            android:src="@drawable/example1" />
 
         <TextView
-            android:text="In order to put the fire out, we will need more firefighters. Remember, we have to place firefighters in such a way that they won't spray each other!"
+            android:text="4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
+            android:textSize="50dp"
             android:textColor="#000000"
-            android:id="@+id/textView" />
+            android:typeface="sans"
+            android:id="@+id/textView5" />
 
         <TextView
-            android:text="\nSo, we can place firefighters in both the center and upper right!"
+            android:text="Lastly, there is sometimes more than one way to place the firefighters. Try to find all of the ways they can stand! "
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-190dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
             android:textColor="#000000"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="-180dp"
-            android:src="@drawable/double_brd"
-            android:id="@+id/imageView"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:text="There are many different ways to place firefighters, but we can never place more firefighters than the number of rows we have. Firefighters also don't like burnt feet, so we can't place them in a fire. It's your job to place the firefighters and save the day!"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:typeface="serif"
-            android:textColor="#000000"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:src="@drawable/fire"
-            android:layout_below="@+id/textView"/>
 
         <TextView
             android:text="\nGame concept adapted from Dakota Doster and Dr. Feryal Alayont.
-            \nGame developed by Molly Alger and Jennifer Moon.
-            \nGraphics provided by Anson Pavlov."
+             \nGame developed by Molly Alger and Jennifer Moon.
+             \nGraphics provided by Anson Pavlov."
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
             android:textSize="10dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/textView2"
@@ -222,8 +201,198 @@
             android:layout_marginBottom="0dp"
             android:gravity="center"
             android:textColor="#000000"/>
+
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>
+
+        <!-- <TextView
+             android:text="Oh no!"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="10dp"
+             android:textSize="50dp"
+             android:textColor="#000000"
+             android:typeface="sans"
+             android:id="@+id/textView3" />
+
+         <TextView
+             android:text="A field is on fire! Firefighters need to stand in the field to put out the fire, but you need to decide where they go. They don't want to be in the same row or column (otherwise they might spray each other with their hoses!) - can you find a way to place them so they can put the fire out? Place firefighters in such a way that they can save the whole field from the fire! Firefighters want to spray the entire field."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-190dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+
+             android:src="@drawable/blank_brd"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true"
+             android:id="@+id/imageView3" />
+
+         <TextView
+             android:text="Let's look at an empty field without any fires to start."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-190dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <TextView
+             android:text="Since there aren't any firefighters in the field yet, we can place one wherever we want. So, let's place one in the middle."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-190dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <TextView
+             android:text="Example"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="30dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="35dp"
+             android:textColor="#000000"
+             android:typeface="sans"
+             android:id="@+id/textView4" />
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-180dp"
+             android:src="@drawable/center_brd"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true" />
+
+         <TextView
+             android:text="This firefighter sprays their hose in the middle row and the middle column because they are standing in both the middle row and middle column."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <TextView
+             android:text="\nWe could have also placed a firefighter in the upper right corner. Like before, the firefighter sprays their hose in their row and column."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-190dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-180dp"
+             android:src="@drawable/topright_brd"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true" />
+
+         <TextView
+             android:text="In order to put the fire out, we will need more firefighters. Remember, we have to place firefighters in such a way that they won't spray each other!"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"
+             android:id="@+id/textView" />
+
+         <TextView
+             android:text="\nSo, we can place firefighters in both the center and upper right!"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-190dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="-180dp"
+             android:src="@drawable/double_brd"
+             android:id="@+id/imageView"
+             android:layout_below="@+id/textView"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true" />
+
+         <TextView
+             android:text="There are many different ways to place firefighters, but we can never place more firefighters than the number of rows we have. Firefighters also don't like burnt feet, so we can't place them in a fire. It's your job to place the firefighters and save the day!"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:textSize="20dp"
+             android:typeface="serif"
+             android:textColor="#000000"/>
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="0dp"
+             android:src="@drawable/fire"
+             android:layout_below="@+id/textView"/>
+
+         <TextView
+             android:text="\nGame concept adapted from Dakota Doster and Dr. Feryal Alayont.
+             \nGame developed by Molly Alger and Jennifer Moon.
+             \nGraphics provided by Anson Pavlov."
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:textSize="10dp"
+             android:layout_marginLeft="5dp"
+             android:id="@+id/textView2"
+             android:layout_below="@+id/textView"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:layout_marginBottom="0dp"
+             android:gravity="center"
+             android:textColor="#000000"/>-->
+
 
 
