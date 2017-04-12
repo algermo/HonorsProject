@@ -8,19 +8,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/green"
+    android:background="@drawable/backrepeat"
     tools:context="algermo.honorsproject.HowToPlay">
 
-    <View
+    <ImageView
     android:id="@+id/menuback"
     android:layout_width="500dp"
-    android:layout_height="510dp"
-
+    android:layout_height="match_parent"
+    android:background="@drawable/menubg"
     android:alpha=".5"
     android:layout_centerHorizontal="true" />
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="490dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -35,9 +35,10 @@
         android:weightSum="1">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-190dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-180dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="-150dp"
             android:src="@drawable/title"/>
 
@@ -49,7 +50,7 @@
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:typeface="sans"
             android:id="@+id/textView1" />
 
@@ -63,7 +64,7 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <TextView
             android:text="\nWait a minute though, there are a few rules for where the firefighters can stand:"
@@ -74,7 +75,7 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <TextView
             android:text="1"
@@ -84,7 +85,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:typeface="sans"
             android:id="@+id/textView2" />
 
@@ -96,7 +97,7 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -114,7 +115,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:typeface="sans"
             android:id="@+id/textView3" />
 
@@ -126,7 +127,7 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -139,11 +140,11 @@
             android:text="3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:typeface="sans"
             android:id="@+id/textView4" />
 
@@ -155,7 +156,7 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -171,7 +172,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="50dp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:typeface="sans"
             android:id="@+id/textView5" />
 
@@ -183,24 +184,26 @@
             android:layout_marginRight="10dp"
             android:textSize="20dp"
             android:typeface="serif"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
         <TextView
             android:text="\nGame concept adapted from Dakota Doster and Dr. Feryal Alayont.
              \nGame developed by Molly Alger and Jennifer Moon.
-             \nGraphics provided by Anson Pavlov."
+             \nGraphics provided by Anson Pavlov.
+             \n"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30dp"
             android:textSize="10dp"
             android:layout_marginLeft="5dp"
-            android:id="@+id/textView2"
+            android:id="@+id/textView6"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
+            android:textAlignment="center"
             android:layout_centerVertical="true"
             android:layout_marginBottom="0dp"
             android:gravity="center"
-            android:textColor="#000000"/>
+            android:textColor="#ffffff"/>
 
     </LinearLayout>
     </ScrollView>

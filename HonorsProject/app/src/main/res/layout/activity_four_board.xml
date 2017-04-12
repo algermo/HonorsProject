@@ -113,51 +113,49 @@
     </GridLayout>
 
     <Button
-        android:text="Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/reset"
-        android:layout_below="@+id/spotsLeft"
-        android:layout_alignRight="@+id/labelback"
-        android:layout_alignEnd="@+id/labelback"
-        android:layout_toRightOf="@+id/gridLayout2"
-        android:layout_toEndOf="@+id/gridLayout2" />
-
-    <Button
         android:text="Check"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/check"
-        android:layout_alignBaseline="@+id/reset"
-        android:layout_alignBottom="@+id/reset"
-        android:layout_alignRight="@+id/gridLayout2"
-        android:layout_alignEnd="@+id/gridLayout2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_width="150dp"
+        android:layout_alignBottom="@+id/gridLayout2"
         android:layout_alignLeft="@+id/labelback"
         android:layout_alignStart="@+id/labelback" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="-20dp"
+        android:id="@+id/reset"
+        android:layout_alignBottom="@+id/gridLayout2"
+        android:layout_alignRight="@+id/labelback"
+        android:layout_alignEnd="@+id/labelback" />
 
     <View
         android:id="@+id/labelback"
         android:layout_width="325dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:background="@drawable/menubg"
         android:alpha=".5"
-        android:layout_alignBottom="@+id/reset"
+        android:layout_marginTop="350dp"
         android:layout_alignLeft="@+id/menuback"
         android:layout_alignStart="@+id/menuback" />
 
     <TextView
-        android:text="There are X ways to place firefighters"
+        android:text="There are X more ways to place firefighters"
         android:textSize="10pt"
         android:typeface="serif"
-        android:layout_alignRight="@+id/labelback"
-        android:layout_alignLeft="@+id/labelback"
-        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:id="@+id/spotsLeft"
         android:textColor="#ffffff"
-        android:layout_below="@+id/menuback"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_above="@+id/check"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 
