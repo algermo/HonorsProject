@@ -1,39 +1,48 @@
 package algermo.honorsproject;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.view.MotionEvent;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
+/***************************************************************************************************
+ * Jennifer Moon & Molly Alger
+ *
+ * HON499 Senior Project
+ * Rookie Firefighters
+ **************************************************************************************************/
 
 public class ThreeByThreeGame extends AppCompatActivity {
 
+    /* instance of the game logic */
     GameLogic game;
-    public ArrayList<int[][]> allBoards;
-    public ArrayList<int[]> rookPolys;
+
+    /* array containing all possible boards */
+    private ArrayList<int[][]> allBoards;
+
+    /* array containing the values of the rook polynomials */
+    private ArrayList<int[]> rookPolys;
+
+    /* array of buttons for the board */
     final Button[][] buttons = new Button[3][3];
-    public int[][] board;
+
+    /* array representing the board */
+    private int[][] board;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three_board);
         View root = LayoutInflater.from(this).inflate(R.layout.activity_three_board, null);
@@ -116,7 +125,6 @@ public class ThreeByThreeGame extends AppCompatActivity {
                     checkButtons();
                     int[][] tempBoard = board;
 
-                    //check to see if the board is updating-----------------------------------------
                     for (int i = 0; i < board.length; i ++){
                         for (int j = 0; j < board.length; j ++){
                             System.out.print(board[i][j]);
@@ -124,7 +132,6 @@ public class ThreeByThreeGame extends AppCompatActivity {
                         System.out.println("");
                     }
 
-                    //check to see if the tempboard is updating-------------------------------------
                     for (int i = 0; i < tempBoard.length; i ++){
                         for (int j = 0; j < tempBoard.length; j ++){
                             System.out.print(tempBoard[i][j]);
@@ -176,7 +183,10 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
     }
 
-
+    /***********************************************************************************************
+     * Determines if a button has been selected. If it has, set the board array space for it
+     * to one.
+     **********************************************************************************************/
     public void checkButtons() {
 
         for(int i = 0; i < 3; i++) {
@@ -189,6 +199,9 @@ public class ThreeByThreeGame extends AppCompatActivity {
 
     }
 
+    /***********************************************************************************************
+     * Reads in the file that contains all the possible board states
+     **********************************************************************************************/
     public void readFile() {
 
         //read the file
@@ -229,10 +242,14 @@ public class ThreeByThreeGame extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        //System.out.print(allBoards);
-
     }
 
+    /***********************************************************************************************
+     * Create the board array based on contents of the file.
+     *
+     * @param size the size of the board from the file
+     * @param values the locations of restrictions from the file
+     **********************************************************************************************/
     public void createBoard(int size, int[] values){
 
         int count = 0;

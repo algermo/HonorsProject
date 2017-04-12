@@ -1,11 +1,11 @@
 package algermo.honorsproject;
-import java.util.Arrays;
 import java.util.ArrayList;
 
 /***************************************************************************************************
  * Jennifer Moon & Molly Alger
  *
  * HON499 Senior Project
+ * Rookie Firefighters
  **************************************************************************************************/
 
 public class GameLogic {

@@ -3,12 +3,13 @@ package algermo.honorsproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 
-/**
- * Created by Owner on 3/30/2017.
- */
+/***************************************************************************************************
+ * Jennifer Moon & Molly Alger
+ *
+ * HON499 Senior Project
+ * Rookie Firefighters
+ **************************************************************************************************/
 
 public class HowToPlay extends AppCompatActivity {
 
@@ -16,7 +17,6 @@ public class HowToPlay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_page);
-
 
     }
 }

@@ -189,7 +189,7 @@
         <TextView
             android:text="\nGame concept adapted from Dakota Doster and Dr. Feryal Alayont.
              \nGame developed by Molly Alger and Jennifer Moon.
-             \nGraphics provided by Anson Pavlov.
+             \nGraphics and music provided by Anson Pavlov.
              \n"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
